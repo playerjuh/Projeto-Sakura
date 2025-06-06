@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="mercado.controller.LoginController" styleClass="login-container">
+    <VBox spacing="20" alignment="CENTER">
+
+            <Text text="Sistema Interno Sakura" styleClass="login-title" />
+
+            <VBox styleClass="login-form" spacing="10">
+                <TextField fx:id="usernameField" promptText="Usuário" styleClass="login-input" />
+                <PasswordField fx:id="passwordField" promptText="Senha" styleClass="login-input" />
+                <Button text="Entrar" onAction="#handleLogin" styleClass="login-button" />
+            </VBox>
+
+            <Label fx:id="errorLabel" textFill="red" styleClass="error-label" visible="false" />
+    </VBox>
+</StackPane>

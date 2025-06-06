@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mercado.controller.RelatorioController">
+    <top>
+        <HBox styleClass="header-historico" spacing="10">
+            <Label text="Histórico de Vendas" styleClass="title-label-historico"/>
+            <Button text="Atualizar" onAction="#atualizarHistorico" styleClass="refresh-button-historico"/>
+        </HBox>
+    </top>
+    
+    <center>
+        <TableView fx:id="tabelaHistorico" styleClass="historico-table-historico">
+            <columns>
+                <TableColumn fx:id="colunaId" text="ID" prefWidth="100"/>
+                <TableColumn fx:id="colunaProduto" text="Produto" prefWidth="400"/>
+                <TableColumn fx:id="colunaQuantidade" text="Quantidade" prefWidth="120"/>
+                <TableColumn fx:id="colunaPreco" text="Preço Unitário" prefWidth="200"/>
+                <TableColumn fx:id="colunaData" text="Data da Venda" prefWidth="200"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox alignment="BOTTOM_RIGHT">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button text="Retornar" onAction="#retornar" styleClass="logout-button"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

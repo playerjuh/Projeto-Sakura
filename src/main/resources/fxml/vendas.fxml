@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="mercado.controller.VendaController">
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <HBox alignment="CENTER">
+        <Label text="Registro de Vendas" styleClass="header"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <ComboBox fx:id="produtoCombo" promptText="Selecione um produto" minWidth="200"/>
+        <TextField fx:id="quantidadeField" promptText="Quantidade"/>
+        <Button text="Adicionar" onAction="#adicionarItem"/>
+    </HBox>
+    
+    <TableView fx:id="itensTable">
+        <columns>
+            <TableColumn fx:id="colunaProduto" text="Produto" prefWidth="400"/>
+            <TableColumn fx:id="colunaQuantidade" text="Quantidade" prefWidth="120"/>
+            <TableColumn fx:id="colunaPreco" text="Preço Unit." prefWidth="200"/>
+            <TableColumn fx:id="colunaSubtotal" text="Subtotal" prefWidth="200"/>
+        </columns>
+    </TableView>
+    
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Label text="Total da Venda:" styleClass="total-label"/>
+        <Label fx:id="totalLabel" styleClass="total-value"/>
+    </HBox>
+    
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Finalizar Venda" onAction="#finalizarVenda" styleClass="primary-button"/>
+        <Button text="Cancelar" onAction="#cancelar" styleClass="secondary-button"/>
+    </HBox>
+    
+    <Label fx:id="mensagemLabel" styleClass="message-label"/>
+</VBox>

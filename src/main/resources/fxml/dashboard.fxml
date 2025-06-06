@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="mercado.controller.DashboardController"
+            styleClass="dashboard-container"
+            stylesheets="@../css/styles.css">
+
+    <center>
+        <VBox spacing="20" alignment="CENTER">
+            <Text text="Sejá bem vindo!" styleClass="dashboard-title"/>
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Gerenciar Produtos" onAction="#handleProdutos" styleClass="dashboard-button"/>
+                <Button text="Realizar Venda" onAction="#handleVendas" styleClass="dashboard-button"/>
+                <Button text="Historico de Vendas" onAction="#handleRelatorio" styleClass="dashboard-button"/>
+            </HBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="BOTTOM_RIGHT">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button text="Logout" onAction="#handleLogout" styleClass="logout-button"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

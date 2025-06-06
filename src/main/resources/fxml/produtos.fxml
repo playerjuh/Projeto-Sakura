@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="mercado.controller.ProdutoController">
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <HBox alignment="CENTER">
+        <Label text="Gerenciamento de Produtos" styleClass="header"/>
+    </HBox>
+
+    <HBox alignment="CENTER_RIGHT">
+        <Button text="Retornar" onAction="#cancelar" styleClass="secondary-button"/>
+    </HBox>
+    
+    <GridPane hgap="10" vgap="10">
+        <Label text="Nome:"  GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="nomeField" promptText="Digite o nome do produto" GridPane.rowIndex="0" GridPane.columnIndex="1">
+            <tooltip>
+                <Tooltip text="Nome do produto (obrigatório)" />
+            </tooltip>
+        </TextField>
+        
+        <Label text="Categoria:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="categoriaField" promptText="Digite a categoria do produto" GridPane.rowIndex="1" GridPane.columnIndex="1">
+            <tooltip>
+                <Tooltip text="Categoria do produto (obrigatório)" />
+            </tooltip>
+        </TextField>
+        
+        <Label text="Preço:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="precoField" promptText="0.00" GridPane.rowIndex="2" GridPane.columnIndex="1">
+            <tooltip>
+                <Tooltip text="Preço unitário (0.00)" />
+            </tooltip>
+        </TextField>
+
+        <Label text="Estoque:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="estoqueField" promptText="0" GridPane.rowIndex="3" GridPane.columnIndex="1">
+            <tooltip>
+                <Tooltip text="Quantidade em estoque (apenas números inteiros)" />
+            </tooltip>
+        </TextField>
+    </GridPane>
+    
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Salvar" onAction="#salvarProduto" styleClass="primary-button"/>
+        <Button text="Editar" onAction="#editarProduto" styleClass="secondary-button"/>
+        <Button text="Excluir" onAction="#excluirProduto" styleClass="secondary-button"/>
+    </HBox>
+    
+    <TableView fx:id="tabelaProdutos">
+        <columns>
+            <TableColumn text="Nome" fx:id="colunaNome" prefWidth="400"/>
+            <TableColumn text="Categoria" fx:id="colunaCategoria" prefWidth="400"/>
+            <TableColumn text="Preço" fx:id="colunaPreco" prefWidth="200"/>
+            <TableColumn text="Estoque" fx:id="colunaEstoque" prefWidth="120"/>
+        </columns>
+    </TableView>
+    
+    <Label fx:id="mensagemLabel" styleClass="message-label"/>
+</VBox>

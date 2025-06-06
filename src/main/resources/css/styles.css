@@ -1,0 +1,214 @@
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+
+}
+
+/* Tela de Login */
+.login-container {
+    -fx-background-image: url("/images/Sakura.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-padding: 40px;
+    -fx-spacing: 20px;
+    -fx-alignment: center;
+}
+
+.login-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.login-form{
+    -fx-padding: 20px;
+    -fx-spacing: 10px;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 2);
+    -fx-max-width: 400px;
+}
+
+.login-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.login-button:hover {
+    -fx-background-color: #45a049;
+}
+
+.error-message {
+    -fx-text-fill: red;
+}
+
+
+/* Dashboard styles */
+.dashboard-container {
+    /*-fx-background-image: url("/images/teste.jpg");*/
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.header {
+    -fx-padding: 15px;
+    -fx-background-color: #4CAF50;
+    -fx-alignment: center;
+}
+
+.header-title {
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.logout-button {
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+}
+
+.welcome-text {
+    -fx-font-size: 20px;
+    -fx-fill: #333333;
+}
+
+/* Estilos para formulários */
+.form-container {
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+}
+
+.form-title{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-fill: #333333;
+}
+
+.primary-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+.secondary-button {
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+}
+
+.total-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+.total-value {
+    -fx-font-size: 18px;
+    -fx-text-fill: #2196f3;
+}
+
+.message-label {
+    -fx-text-fill: #ff5722;
+}
+
+/* Estilos para tabelas */
+.table-view {
+    -fx-base: #ffffff;
+    -fx-control-inner-background: #ffffff;
+    -fx-table-header-border-color: transparent;
+}
+
+.table-column{
+    -fx-alignment: center;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+}
+
+.button {
+    -fx-cursor: hand;
+    -fx-padding: 5 10 5 10;
+}
+
+.primary-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+.secondary-button {
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+}
+
+/* Validação */
+.text-field:error, .text-field:error:focused{
+    -fx-text-box-border: #ff0000;
+    -fx-focus-color: #ff0000;
+}
+
+.tooltip{
+    -fx-font-size: 12px;
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #333333;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+    -fx-padding: 5px;
+}
+
+/* Relatorio de historico */
+
+.historico-table {
+    -fx-font-size: 14px;
+    -fx-table-cell-border-color: transparent;
+}
+
+.header-historico {
+    -fx-padding: 15px;
+    -fx-background-color: #f5f5f5;
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color: #e0e0e0;
+}
+
+.title-label-historico {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.refresh-button-historico {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-padding: 5px 15px;
+}
+
+.refresh-button-historico:hover {
+    -fx-background-color: #45a049;
+}
+
+/* Colunas */
+.id-column-historico {
+    -fx-alignment: CENTER;
+    -fx-pref-width: 50;
+}
+
+.produto-column-historico {
+    -fx-pref-width: 200;
+}
+
+.quantidade-column-historico {
+    -fx-alignment: CENTER;
+    -fx-pref-width: 80;
+}
+
+.preco-column-historico {
+    -fx-alignment: CENTER_RIGHT;
+    -fx-pref-width: 100;
+}
+
+.data-column-historico {
+    -fx-alignment: CENTER;
+    -fx-pref-width: 120;
+}
